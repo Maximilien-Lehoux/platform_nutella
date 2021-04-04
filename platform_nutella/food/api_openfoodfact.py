@@ -1,29 +1,29 @@
 import json
 import requests
 
-API_TO_PRODUCT_FIELDS = {
-    'product_name_fr': 'name',
-    'url': 'url',
-    'nutrition_grade_fr': 'nutriscore',
-    'category': 'category'
-    }
+# API_TO_PRODUCT_FIELDS = {
+    # 'product_name_fr': 'name',
+    # 'url': 'url',
+    # 'nutrition_grade_fr': 'nutriscore',
+    # 'category': 'category'
+    # }
 
 NUMBER_PRODUCTS = 100
 
-payload_products_generic_name = {
-                    'search_terms': 'coquillette',
-                    'page_size': NUMBER_PRODUCTS,
-                    'json': 'true',
-                    }
+# payload_products_generic_name = {
+                    # 'search_terms': 'coquillette',
+                    # 'page_size': NUMBER_PRODUCTS,
+                    # 'json': 'true',
+                    # }
 
-payload_substitutes = {
-                    'action': 'process',
-                    'tagtype_0': 'categories',
-                    'tag_contains_0': 'contains',
-                    'tag_0': 'Pâtes alimentaire',
-                    'page_size': NUMBER_PRODUCTS,
-                    'json': 'true',
-                    }
+# payload_substitutes = {
+                    # 'action': 'process',
+                    # 'tagtype_0': 'categories',
+                    # 'tag_contains_0': 'contains',
+                    # 'tag_0': 'Pâtes alimentaire',
+                    # 'page_size': NUMBER_PRODUCTS,
+                    # 'json': 'true',
+                    # }
 
 
 URL_GENERAL = 'https://fr.openfoodfacts.org/cgi/search.pl'
@@ -91,11 +91,11 @@ class DataApi:
 # 'product_name_fr', 'generic_name_fr', 'url', 'image_front_thumb_url', 'nutrition_grade_fr'
 
 
-# example_data_api = DataApi("cassoulet")
-# data_categories = example_data_api.get_categories_name_food()
+example_data_api = DataApi("cassoulet")
+data_categories = example_data_api.select_key_test()
 # category = example_data_api.get_category_selected(data_categories)
 
-# print(category)
+print(data_categories)
 
 
 # data_products_category = example_data_api.select_key_test()
