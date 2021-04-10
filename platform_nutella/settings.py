@@ -93,7 +93,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'platform_nutellaf.wsgi.application'
+WSGI_APPLICATION = 'platform_nutella.wsgi.application'
 
 
 # Database
