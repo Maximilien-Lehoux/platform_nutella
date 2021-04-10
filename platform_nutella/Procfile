@@ -1,2 +1,2 @@
-web: gunicorn platform_nutella platform_nutella.wsgi --log-file -
+web: gunicorn platform_nutella.wsgi --chdir pur_beurre/ --log-file -
 
