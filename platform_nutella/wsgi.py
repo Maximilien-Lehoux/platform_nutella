@@ -1,5 +1,5 @@
 """
-WSGI config for platform_nutellaf project.
+WSGI config for platform_nutella project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
