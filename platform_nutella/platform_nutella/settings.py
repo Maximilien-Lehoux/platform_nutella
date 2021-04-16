@@ -34,7 +34,7 @@ if os.environ.get('ENV') == 'PRODUCTION':
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'purbeurre-maximilien.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'purbeurre-maximilien.herokuapp.com','188.166.164.76']
 
 
 MESSAGE_TAGS = {
@@ -73,8 +73,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+
+# 'whitenoise.middleware.WhiteNoiseMiddleware',
+
 
 ROOT_URLCONF = 'platform_nutella.urls'
 
@@ -164,7 +166,7 @@ if os.environ.get('ENV') == 'PRODUCTION':
         os.path.join(PROJECT_ROOT, 'static'),
     )
 
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
     # STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
     db_from_env = dj_database_url.config(conn_max_age=500)
