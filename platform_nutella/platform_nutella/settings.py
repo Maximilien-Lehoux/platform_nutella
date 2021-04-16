@@ -15,7 +15,7 @@ import os
 
 from django.contrib.messages import constants as messages
 import dj_database_url
-import django_heroku
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -102,9 +102,9 @@ WSGI_APPLICATION = 'platform_nutella.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql', # on utilise l'adaptateur postgresql
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', # on utilise l'adaptateur postgresql
         'NAME': 'nutella', # le nom de notre base de donnees creee precedemment
-        'USER': 'postgres', # attention : remplacez par votre nom d'utilisateur
+        'USER': 'maximilien', #remplacez par votre nom d'utilisateur
         'PASSWORD': 'Veronicamars2991',
         'HOST': 'localhost',
         'PORT': '5432',
