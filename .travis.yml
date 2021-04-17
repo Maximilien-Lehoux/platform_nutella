@@ -2,12 +2,12 @@ language: python
 python:
   - '3.7'
 
-before_script:
-  - pip install -r requirements.txt
-
 branches:
     only:
         - staging
+
+before_script:
+  - pip install -r requirements.txt
 
 env: DJANGO_SETTINGS_MODULE="platform_nutella.settings.travis"
 
@@ -15,5 +15,5 @@ services:
   - postgresql
 
 script:
-  - platform_nutella/manage.py test
+  - platform_nutella/platform_nutella/manage.py test
 
