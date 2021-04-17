@@ -15,5 +15,5 @@ services:
   - postgresql
 
 script:
-  - platform_nutella/platform_nutella/manage.py test
+  - platform_nutella/manage.py test
 
