@@ -18,14 +18,19 @@ from django.conf.urls import include, url
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.urls import path
 
 from food import views
+
+def trigger_error(request):
+    division_by_zero = 1 / 0
 
 urlpatterns = [
     url(r'^$', views.index),
     url(r'^food/', include('food.urls')),
     url(r'^accounts/', include('accounts.urls')),
-    url(r'^admin_content/', admin.site.urls)
+    url(r'^admin_content/', admin.site.urls),
+    path('sentry-debug/', trigger_error),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -7,15 +7,17 @@ from django.conf.urls import url
 from django.conf import settings
 from django.shortcuts import redirect
 import django.contrib.messages
+# import logging
 
 from .api_openfoodfact import DataApi
 from .models import Food, FoodSubstitute, FoodsSaved
 from .form_food import ResearchFood
 
+# logger = logging.getLogger(__name__)
+
 
 def index(request):
     """receives "true" when data bar searches for and displays index"""
-
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
         return redirect('food:research')
