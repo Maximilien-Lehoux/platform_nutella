@@ -40,7 +40,7 @@ class TestViewsFood(TestCase):
     def test_index_page_return_200(self):
         """test that the index page returns a 200"""
         response = self.client.get(reverse('food:index'))
-        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response.status_code, 200)
 
     def test_substitutes_saved_user_return_200_user_logged(self):
         self.client.login(username="Arthur", password="1234")
