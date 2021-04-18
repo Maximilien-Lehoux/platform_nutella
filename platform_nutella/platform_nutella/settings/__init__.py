@@ -103,7 +103,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2', # on utilise l'adaptateur postgresql
         'NAME': 'nutella', # le nom de notre base de donnees creee precedemment
-        'USER': 'maximilien', #remplacez par votre nom d'utilisateur
+        'USER': 'postgres', #remplacez par votre nom d'utilisateur
         'PASSWORD': 'Veronicamars2991',
         'HOST': 'localhost',
         'PORT': '5432',
