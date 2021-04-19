@@ -8,6 +8,7 @@ branches:
 
 before_script:
   - pip install -r requirements.txt
+    # - psql -c 'create database travis_ci_test;' -U postgres
 
 env: DJANGO_SETTINGS_MODULE="platform_nutella.settings.travis"
 
@@ -15,5 +16,6 @@ services:
   - postgresql
 
 script:
-  - python platform_nutella/manage.py test
+  - python platform_nutella/manage.py test food
+  - python platform_nutella/manage.py test accounts 
 

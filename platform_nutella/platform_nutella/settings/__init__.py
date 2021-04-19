@@ -101,7 +101,7 @@ WSGI_APPLICATION = 'platform_nutella.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', # on utilise l'adaptateur postgresql
+        'ENGINE': 'django.db.backends.postgresql', # on utilise l'adaptateur postgresql
         'NAME': 'nutella', # le nom de notre base de donnees creee precedemment
         'USER': 'postgres', #remplacez par votre nom d'utilisateur
         'PASSWORD': 'Veronicamars2991',
