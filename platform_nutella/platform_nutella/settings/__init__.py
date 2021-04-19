@@ -25,7 +25,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+<<<<<<< HEAD
 SECRET_KEY = 's)@1Z*\x0cF\rAHQ}2\n$VQzX76[d'
+=======
+SECRET_KEY = 'm(^baopoih8c&m-n4smw4i13ul#k#=zg$m38h=^stgrhywofv!'
+>>>>>>> 70670e9b730f07171dd2eae42a6a177e59720876
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -101,7 +105,7 @@ WSGI_APPLICATION = 'platform_nutella.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', # on utilise l'adaptateur postgresql
+        'ENGINE': 'django.db.backends.postgresql', # on utilise l'adaptateur postgresql
         'NAME': 'nutella', # le nom de notre base de donnees creee precedemment
         'USER': 'maximilien', #remplacez par votre nom d'utilisateur
         'PASSWORD': 'Veronicamars2991',
