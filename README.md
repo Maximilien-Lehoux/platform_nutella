@@ -2,7 +2,7 @@ Le projet 10 est une continuation du projet 8 "purbeurre".
 
 - Adresse IP serveur digitalocean : 188.166.164.76
 
-- Dans ce projet, les objectifs sont :
+#Dans ce projet, les objectifs sont :
 
 - Location d'un serveur (Digital Ocean)
 
