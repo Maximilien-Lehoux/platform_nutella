@@ -1,46 +1,16 @@
-# 1. Objet du projet 8 - plateforme PurBeurre
-lien https://purbeurre-maximilien.herokuapp.com/
-Réalisation d'une application qui permet de trouver des substituts plus sains à des aliments trop gras ou trop sucrés à partir de recherches sur la plateforme libre et ouverte OpenFoodFacts dont l'objectif est de répertorier les caractéristiques nutritives de produits alimentaires commercialisés dans le monde entier.
+Le projet 10 est une continuation du projet 8 "purbeurre".
+Adresse IP serveur digitalocean : 188.166.164.76
 
-## Branche principale "master"
+Dans ce projet, les objectifs sont :
 
-## 2. Ressources extérieures utilisées :
-API OpenFoodFacts.
+Location d'un serveur (Digital Ocean)
+Configuration du serveur (connection ssh à notre PC, configuration du Firewall, etc...)
+Séparation des environnements (développement, production)
+Installation de Nginx
+Installation de Gunicorn
+Installation de Supervisor
+Utilisation de l'intégration continu (Travis CI)
+Monitoring de Digital Ocean
+Monitoring des logs de l'application avec Sentry
+Tâche crontab
 
-## 3. Outils
-Environnement virtuel
-Développement en python 3.7,
-Base de données PostgreSQL 13.0,
-Gestion des templates et des tables avec Django 3.1,
-Design avec Bootstrap 4.
-Déploiement sur la plateforme Heroku - lien :
-
-## 4. Installation des dépendances
-"""
-pip install -r requirements.txt
-"""
-
-## 5. Tests
-Lancer les tests :
-"""
-manage.py test
-"""
-
-## 6. Lancement en local
-Créer et remplir la base de données :
-(utilisation de postgreSQL, modifiez-vos donnée serveur dans le fichier setting )
-
-Vous pouvez modifier le nombre de produits pris dans la base de données
-d'open-food-fact en le modifiant dans "food/constant.py"
-
-
-Commande de lancement =
-"""
-manage.py migrate
-manage.py makemigrations
-"""
-
-Lancer l'application :
-"""
-python manage.py runserver
-"""
