@@ -15,7 +15,6 @@ from .form_food import ResearchFood
 
 def index(request):
     """receives "true" when data bar searches for and displays index"""
-
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
         return redirect('food:research')
@@ -25,7 +24,6 @@ def index(request):
 
 def research(request):
     """receives data entered by the user and displays the substitutes"""
-
     countdb = FoodSubstitute.objects.count()
     if countdb >= 1000:
         Food.objects.all().delete()
