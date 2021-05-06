@@ -43,6 +43,11 @@ manage.py migrate
 manage.py makemigrations
 """
 
+Remplir base de donnée
+"""
+manage.py fill_database
+"""
+
 Lancer l'application :
 """
 python manage.py runserver
