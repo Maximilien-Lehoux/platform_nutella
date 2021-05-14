@@ -1,7 +1,30 @@
 from django.test import TestCase
 from django.urls import reverse
+from selenium import webdriver
+import time
 
+from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from django.contrib.auth.models import User
+
+
+class MySeleniumTests(StaticLiveServerTestCase):
+
+    @classmethod
+    def setUp(self):
+        self.driver = webdriver.Chrome("C:/Users/Maximilien/chromedriver.exe")
+
+    def test_login(self):
+        self.driver.get(str(self.live_server_url) + '/accounts/login')
+        username_input = self.driver.find_element_by_id('id_user_name')
+        password_input = self.driver.find_element_by_id('id_password')
+        submission_button = self.driver.find_element_by_css_selector(
+            '#button_login')
+        username_input.send_keys('maximilien24')
+        password_input.send_keys('Veronicamars2991')
+        submission_button.click()
+        time.sleep(5)
+        redirection_url = self.driver.current_url
+        self.assertEqual(self.live_server_url + '/', redirection_url)
 
 
 class TestViewsFood(TestCase):

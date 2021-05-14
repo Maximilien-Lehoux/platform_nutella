@@ -13,7 +13,8 @@
              <form action="{% url 'accounts:login_page' %}" method="post" novalidate>
                 {% csrf_token %}
                 {{ form | crispy }}
-                <input type="submit" value="S'identifier"  class="btn btn-success">
+
+                <button type="submit" id="button_login" class="btn btn-success">S'identifier</button>
              </form>
 
           <div class="line_register_or_not_space">

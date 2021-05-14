@@ -1,6 +1,8 @@
 from django.test import TestCase
 from django.urls import reverse
-
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from django.test import LiveServerTestCase
 
 from .models import Food, FoodSubstitute, FoodsSaved
 from .models import User
@@ -97,5 +99,3 @@ class TestViewsFood(TestCase):
         data = {"food_research": "Cassoulet"}
         response = self.client.post(reverse('food:research'), data)
         self.assertEqual(response.status_code, 200)
-
-
