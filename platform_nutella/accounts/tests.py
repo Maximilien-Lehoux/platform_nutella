@@ -12,6 +12,10 @@ class MySeleniumTests(StaticLiveServerTestCase):
     @classmethod
     def setUp(self):
         self.driver = webdriver.Chrome("C:/Users/Maximilien/chromedriver.exe")
+        self.user = User.objects.create(username='Arthur', last_name='H',
+                                        email='arthurH@gmail.com')
+        self.user.set_password('1234')
+        self.user.save()
 
     def test_login(self):
         self.driver.get(str(self.live_server_url) + '/accounts/login')
@@ -19,12 +23,11 @@ class MySeleniumTests(StaticLiveServerTestCase):
         password_input = self.driver.find_element_by_id('id_password')
         submission_button = self.driver.find_element_by_css_selector(
             '#button_login')
-        username_input.send_keys('maximilien24')
-        password_input.send_keys('Veronicamars2991')
+        username_input.send_keys('Arthur')
+        password_input.send_keys('1234')
         submission_button.click()
-        time.sleep(5)
         redirection_url = self.driver.current_url
-        self.assertEqual(self.live_server_url + '/', redirection_url)
+        self.assertEqual(self.live_server_url + '/food/index/', redirection_url)
 
 
 class TestViewsFood(TestCase):

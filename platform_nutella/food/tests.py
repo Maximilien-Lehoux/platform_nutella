@@ -1,7 +1,5 @@
 from django.test import TestCase
 from django.urls import reverse
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
 from django.test import LiveServerTestCase
 
 from .models import Food, FoodSubstitute, FoodsSaved
